@@ -14,7 +14,14 @@
     ],
     "frameworks": {
       "netcoreapp2.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "/Users/williamstraus/Library/Mobile Documents/com~apple~CloudDocs/Dokumendid (iCloud)/Ülikool/Tallinna Tehnikaülikool/I semester/C# programmeerimine/Battleship/DAL/DAL.csproj": {
+            "projectPath": "/Users/williamstraus/Library/Mobile Documents/com~apple~CloudDocs/Dokumendid (iCloud)/Ülikool/Tallinna Tehnikaülikool/I semester/C# programmeerimine/Battleship/DAL/DAL.csproj"
+          },
+          "/Users/williamstraus/Library/Mobile Documents/com~apple~CloudDocs/Dokumendid (iCloud)/Ülikool/Tallinna Tehnikaülikool/I semester/C# programmeerimine/Battleship/Domain/Domain.csproj": {
+            "projectPath": "/Users/williamstraus/Library/Mobile Documents/com~apple~CloudDocs/Dokumendid (iCloud)/Ülikool/Tallinna Tehnikaülikool/I semester/C# programmeerimine/Battleship/Domain/Domain.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
