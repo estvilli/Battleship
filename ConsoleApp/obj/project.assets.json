@@ -208,16 +208,6 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "DAL/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/DAL.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DAL.dll": {}
-        }
-      },
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -707,11 +697,6 @@
         "netstandard.library.nuspec"
       ]
     },
-    "DAL/1.0.0": {
-      "type": "project",
-      "path": "../DAL/DAL.csproj",
-      "msbuildProject": "../../../../../../Ülikool/Tallinna Tehnikaülikool/I semester/C# programmeerimine/Battleship/DAL/DAL.csproj"
-    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
@@ -725,7 +710,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "DAL >= 1.0.0",
+      "/Users/williamstraus/Library/Mobile Documents/com~apple~CloudDocs/Dokumendid (iCloud)/Ülikool/Tallinna Tehnikaülikool/I semester/C# programmeerimine/Battleship/DAL/DAL.csproj",
       "Domain >= 1.0.0",
       "GameUI >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
@@ -794,5 +779,16 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for '/Users/williamstraus/Library/Mobile Documents/com~apple~CloudDocs/Dokumendid (iCloud)/Ülikool/Tallinna Tehnikaülikool/I semester/C# programmeerimine/Battleship/DAL/DAL.csproj'. The project file may be invalid or missing targets required for restore.",
+      "libraryId": "/Users/williamstraus/Library/Mobile Documents/com~apple~CloudDocs/Dokumendid (iCloud)/Ülikool/Tallinna Tehnikaülikool/I semester/C# programmeerimine/Battleship/DAL/DAL.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    }
+  ]
 }
