@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{4967292B-3860-4D9B-8CCF-5FD978501F70}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{7A6D0816-E5A2-4F36-B76F-30081B779C37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{F8A91F31-39D0-45CB-9B30-7D8BA6035180}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameUI", "GameUI\GameUI.csproj", "{3B096AC5-E94C-443C-8FA4-9F378872E25A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,17 @@ Global
 		{4967292B-3860-4D9B-8CCF-5FD978501F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4967292B-3860-4D9B-8CCF-5FD978501F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4967292B-3860-4D9B-8CCF-5FD978501F70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A6D0816-E5A2-4F36-B76F-30081B779C37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A6D0816-E5A2-4F36-B76F-30081B779C37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A6D0816-E5A2-4F36-B76F-30081B779C37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A6D0816-E5A2-4F36-B76F-30081B779C37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8A91F31-39D0-45CB-9B30-7D8BA6035180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8A91F31-39D0-45CB-9B30-7D8BA6035180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8A91F31-39D0-45CB-9B30-7D8BA6035180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8A91F31-39D0-45CB-9B30-7D8BA6035180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B096AC5-E94C-443C-8FA4-9F378872E25A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B096AC5-E94C-443C-8FA4-9F378872E25A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B096AC5-E94C-443C-8FA4-9F378872E25A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B096AC5-E94C-443C-8FA4-9F378872E25A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

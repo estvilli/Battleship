@@ -227,6 +227,19 @@
         "runtime": {
           "bin/placeholder/Domain.dll": {}
         }
+      },
+      "GameUI/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GameUI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameUI.dll": {}
+        }
       }
     }
   },
@@ -703,12 +716,18 @@
       "type": "project",
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../../../../../../Ülikool/Tallinna Tehnikaülikool/I semester/C# programmeerimine/Battleship/Domain/Domain.csproj"
+    },
+    "GameUI/1.0.0": {
+      "type": "project",
+      "path": "../GameUI/GameUI.csproj",
+      "msbuildProject": "../../../../../../Ülikool/Tallinna Tehnikaülikool/I semester/C# programmeerimine/Battleship/GameUI/GameUI.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "DAL >= 1.0.0",
       "Domain >= 1.0.0",
+      "GameUI >= 1.0.0",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
@@ -745,6 +764,9 @@
             },
             "/Users/williamstraus/Library/Mobile Documents/com~apple~CloudDocs/Dokumendid (iCloud)/Ülikool/Tallinna Tehnikaülikool/I semester/C# programmeerimine/Battleship/Domain/Domain.csproj": {
               "projectPath": "/Users/williamstraus/Library/Mobile Documents/com~apple~CloudDocs/Dokumendid (iCloud)/Ülikool/Tallinna Tehnikaülikool/I semester/C# programmeerimine/Battleship/Domain/Domain.csproj"
+            },
+            "/Users/williamstraus/Library/Mobile Documents/com~apple~CloudDocs/Dokumendid (iCloud)/Ülikool/Tallinna Tehnikaülikool/I semester/C# programmeerimine/Battleship/GameUI/GameUI.csproj": {
+              "projectPath": "/Users/williamstraus/Library/Mobile Documents/com~apple~CloudDocs/Dokumendid (iCloud)/Ülikool/Tallinna Tehnikaülikool/I semester/C# programmeerimine/Battleship/GameUI/GameUI.csproj"
             }
           }
         }

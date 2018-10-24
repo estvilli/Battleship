@@ -15,14 +15,13 @@ namespace Domain
         private int x_coord = 0;
         private string x_coord_string;
         private int y_coord = 0;
-        public bool ContinuePlaying = true;
+        private bool ContinuePlaying = true;
         private string userInput = null;
         private BoardSquareState hitOrMiss;
         private int shipSquareCount = 0;
         private int rowCounter = 1;
         private string direction;
         private bool isAutomatic = false;
-        
 
 
         public List<List<BoardSquareState>> Player1Board1 { get; set; } = new List<List<BoardSquareState>>();
@@ -62,9 +61,9 @@ namespace Domain
         {
             {0, Directions.W}, {1, Directions.N}, {2, Directions.E}, {3, Directions.S}
         };*/
-        
+
         Random random = new Random();
-        
+
 
         //Player1Board1
 
@@ -83,22 +82,22 @@ namespace Domain
             ShipLengths.Add(1);
             ShipLengths.Add(0);
 
-            /*Player1ShipCoordinates.Add("01");
+            /*Player1ShipCoordinates.Add("11");
             Player1ShipCoordinates.Add("22");
             Player1ShipCoordinates.Add("47");
-            Player1ShipCoordinates.Add("74");
-            Player1ShipCoordinates.Add("91");
+            Player1ShipCoordinates.Add("33");
+            Player1ShipCoordinates.Add("64");
             Player1ShipDirections.Add(Directions.E);
             Player1ShipDirections.Add(Directions.S);
             Player1ShipDirections.Add(Directions.W);
             Player1ShipDirections.Add(Directions.E);
             Player1ShipDirections.Add(Directions.E);
 
-            Player2ShipCoordinates.Add("01");
+            Player2ShipCoordinates.Add("11");
             Player2ShipCoordinates.Add("22");
             Player2ShipCoordinates.Add("47");
-            Player2ShipCoordinates.Add("74");
-            Player2ShipCoordinates.Add("91");
+            Player2ShipCoordinates.Add("33");
+            Player2ShipCoordinates.Add("64");
             Player2ShipDirections.Add(Directions.E);
             Player2ShipDirections.Add(Directions.S);
             Player2ShipDirections.Add(Directions.W);
@@ -128,8 +127,7 @@ namespace Domain
             {
                 ManualShipCoordinates1();
             }
-            
-            
+
             //place player 1 ships on table
             foreach (var coordinate in Player1ShipCoordinates)
             {
@@ -195,7 +193,7 @@ namespace Domain
                     Player2Board1[i].Add(BoardSquareState.Empty);
                 }
             }
-                                    
+
             if (this.isAutomatic)
             {
                 AutomaticShipCoordinates2();
@@ -204,7 +202,7 @@ namespace Domain
             {
                 ManualShipCoordinates2();
             }
-            
+
             //place player 2 ships on table
             foreach (var coordinate in Player1ShipCoordinates)
             {
@@ -246,6 +244,8 @@ namespace Domain
                 counter1 = 0;
                 counter++;
             }
+
+            counter = 0;
 
             //player 2 enemy ships table
 
@@ -296,6 +296,7 @@ namespace Domain
                     Console.WriteLine("Miss!");
                 }
 
+                
                 for (int i = 0; i < TableDimension; i++)
                 {
                     for (int j = 0; j < TableDimension; j++)
@@ -348,6 +349,7 @@ namespace Domain
                 {
                     Console.WriteLine("Miss!");
                 }
+
 
                 for (int i = 0; i < TableDimension; i++)
                 {
@@ -535,19 +537,19 @@ namespace Domain
         {
             switch (direction)
             {
-                    case "W":
-                        return Directions.W;
-                    case "N":
-                        return Directions.N;
-                    case "E":
-                        return Directions.E;
-                    case "S":
-                        return Directions.S;
-                    default:
-                        return Directions.error;
+                case "W":
+                    return Directions.W;
+                case "N":
+                    return Directions.N;
+                case "E":
+                    return Directions.E;
+                case "S":
+                    return Directions.S;
+                default:
+                    return Directions.error;
             }
         }
-        
+
         public Directions NumberToEnum(int randomNumber)
         {
             switch (randomNumber)
@@ -574,52 +576,57 @@ namespace Domain
             Console.WriteLine("Please enter the horizontal coordinate of your carrier (a-...)");
             y_coord = letterToNumber[Console.ReadLine()];
             Player1ShipCoordinates.Add(x_coord_string + y_coord.ToString());
-            Console.WriteLine("Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
+            Console.WriteLine(
+                "Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
             direction = Console.ReadLine().ToUpper();
             Player1ShipDirections.Add(StringToEnum(direction));
-            
-            
+
+
             Console.WriteLine(GetBoardString11());
             Console.WriteLine("Please enter the vertical coordinate of your battleship (1-...)");
             x_coord_string = Console.ReadLine();
             Console.WriteLine("Please enter the horizontal coordinate of your battleship (a-...)");
             y_coord = letterToNumber[Console.ReadLine()];
             Player1ShipCoordinates.Add(x_coord_string + y_coord.ToString());
-            Console.WriteLine("Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
+            Console.WriteLine(
+                "Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
             direction = Console.ReadLine().ToUpper();
             Player1ShipDirections.Add(StringToEnum(direction));
-            
+
             Console.WriteLine(GetBoardString11());
             Console.WriteLine("Please enter the vertical coordinate of your submarine (1-...)");
             x_coord_string = Console.ReadLine();
             Console.WriteLine("Please enter the horizontal coordinate of your submarine (a-...)");
             y_coord = letterToNumber[Console.ReadLine()];
             Player1ShipCoordinates.Add(x_coord_string + y_coord.ToString());
-            Console.WriteLine("Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
+            Console.WriteLine(
+                "Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
             direction = Console.ReadLine().ToUpper();
             Player1ShipDirections.Add(StringToEnum(direction));
-            
+
             Console.WriteLine(GetBoardString11());
             Console.WriteLine("Please enter the vertical coordinate of your cruiser (1-...)");
             x_coord_string = Console.ReadLine();
             Console.WriteLine("Please enter the horizontal coordinate of your cruiser (a-...)");
             y_coord = letterToNumber[Console.ReadLine()];
             Player1ShipCoordinates.Add(x_coord_string + y_coord.ToString());
-            Console.WriteLine("Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
+            Console.WriteLine(
+                "Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
             direction = Console.ReadLine().ToUpper();
             Player1ShipDirections.Add(StringToEnum(direction));
-            
+
             Console.WriteLine(GetBoardString11());
             Console.WriteLine("Please enter the vertical coordinate of your patrol (1-...)");
             x_coord_string = Console.ReadLine();
             Console.WriteLine("Please enter the horizontal coordinate of your patrol (a-...)");
             y_coord = letterToNumber[Console.ReadLine()];
             Player1ShipCoordinates.Add(x_coord_string + y_coord.ToString());
-            Console.WriteLine("Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
+            Console.WriteLine(
+                "Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
             direction = Console.ReadLine().ToUpper();
             Player1ShipDirections.Add(StringToEnum(direction));
         }
-        
+
         public void ManualShipCoordinates2()
         {
             //ask player 2 for ship coordinates
@@ -629,47 +636,52 @@ namespace Domain
             Console.WriteLine("Please enter the horizontal coordinate of your carrier (a-...)");
             y_coord = letterToNumber[Console.ReadLine()];
             Player2ShipCoordinates.Add(x_coord_string + y_coord.ToString());
-            Console.WriteLine("Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
+            Console.WriteLine(
+                "Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
             direction = Console.ReadLine().ToUpper();
             Player2ShipDirections.Add(StringToEnum(direction));
-            
+
             Console.WriteLine(GetBoardString21());
             Console.WriteLine("Please enter the vertical coordinate of your battleship (1-...)");
             x_coord_string = Console.ReadLine();
             Console.WriteLine("Please enter the horizontal coordinate of your battleship (a-...)");
             y_coord = letterToNumber[Console.ReadLine()];
             Player2ShipCoordinates.Add(x_coord_string + y_coord.ToString());
-            Console.WriteLine("Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
+            Console.WriteLine(
+                "Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
             direction = Console.ReadLine().ToUpper();
             Player2ShipDirections.Add(StringToEnum(direction));
-            
+
             Console.WriteLine(GetBoardString21());
             Console.WriteLine("Please enter the vertical coordinate of your submarine (1-...)");
             x_coord_string = Console.ReadLine();
             Console.WriteLine("Please enter the horizontal coordinate of your submarine (a-...)");
             y_coord = letterToNumber[Console.ReadLine()];
             Player2ShipCoordinates.Add(x_coord_string + y_coord.ToString());
-            Console.WriteLine("Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
+            Console.WriteLine(
+                "Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
             direction = Console.ReadLine().ToUpper();
             Player2ShipDirections.Add(StringToEnum(direction));
-            
+
             Console.WriteLine(GetBoardString21());
             Console.WriteLine("Please enter the vertical coordinate of your cruiser (1-...)");
             x_coord_string = Console.ReadLine();
             Console.WriteLine("Please enter the horizontal coordinate of your cruiser (a-...)");
             y_coord = letterToNumber[Console.ReadLine()];
             Player2ShipCoordinates.Add(x_coord_string + y_coord.ToString());
-            Console.WriteLine("Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
+            Console.WriteLine(
+                "Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
             direction = Console.ReadLine().ToUpper();
             Player2ShipDirections.Add(StringToEnum(direction));
-            
+
             Console.WriteLine(GetBoardString21());
             Console.WriteLine("Please enter the vertical coordinate of your patrol (1-...)");
             x_coord_string = Console.ReadLine();
             Console.WriteLine("Please enter the horizontal coordinate of your patrol (a-...)");
             y_coord = letterToNumber[Console.ReadLine()];
             Player2ShipCoordinates.Add(x_coord_string + y_coord.ToString());
-            Console.WriteLine("Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
+            Console.WriteLine(
+                "Please enter the direction of the ship: \"W\" - west, \"N\" - north, \"E\" - east, \"S\" - south");
             direction = Console.ReadLine().ToUpper();
             Player2ShipDirections.Add(StringToEnum(direction));
         }
@@ -682,11 +694,11 @@ namespace Domain
                 sb1.Append(random.Next(0, 10).ToString());
                 sb1.Append(random.Next(0, 10).ToString());
                 Player1ShipCoordinates.Add(sb1.ToString());
-                
-                Player1ShipDirections.Add(NumberToEnum(random.Next(0,4)));
+
+                Player1ShipDirections.Add(NumberToEnum(random.Next(0, 4)));
             }
-        } 
-        
+        }
+
         public void AutomaticShipCoordinates2()
         {
             for (int i = 0; i < 5; i++)
@@ -695,13 +707,11 @@ namespace Domain
                 sb1.Append(random.Next(0, 10).ToString());
                 sb1.Append(random.Next(0, 10).ToString());
                 Player2ShipCoordinates.Add(sb1.ToString());
-                
-                Player2ShipDirections.Add(NumberToEnum(random.Next(0,4)));
+
+                Player2ShipDirections.Add(NumberToEnum(random.Next(0, 4)));
             }
-        } 
+        }
 
-
-        //ownShipsTable = new String[TableDimension,TableDimension];
-        //opponentShipsTable = new String[TableDimension, TableDimension];
+        
     }
 }

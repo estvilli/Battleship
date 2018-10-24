@@ -8,6 +8,11 @@
     <ItemGroup>
       <ProjectReference Include="..\DAL\DAL.csproj" />
       <ProjectReference Include="..\Domain\Domain.csproj" />
+      <ProjectReference Include="..\GameUI\GameUI.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="DbInitializer.cs" />
     </ItemGroup>
 
 </Project>

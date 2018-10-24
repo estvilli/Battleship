@@ -17,6 +17,37 @@
         </e>
         <e p="Program.cs" t="Include" />
       </e>
+      <e p="DAL" t="IncludeRecursive">
+        <e p="DAL.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Domain" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="BoardSquareState.cs" t="Include" />
+        <e p="Directions.cs" t="Include" />
+        <e p="Domain.csproj" t="IncludeRecursive" />
+        <e p="Domain.csproj.DotSettings" t="Include" />
+        <e p="GameBoard.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Domain.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Ships.cs" t="Include" />
+      </e>
+      <e p="GameUI" t="IncludeRecursive">
+        <e p="BattleshipUI.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="GameUI.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="GameUI.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
       <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>
